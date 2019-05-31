@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Beta>True</Beta>
-  <Category>Tools: Utilities</Category>
+  <Category>Other</Category>
   <Name>Firefly III</Name>
-  <Description>
-    Official docker image for Firefly  III.
-  </Description>
-  <Overview>
-    Official docker image for Firefly  III.
-	Set the database name, root password, mysql user name, and mysql user password.
-  </Overview>
+  <Description>Official docker image for Firefly  III.</Description>
+  <Overview>Official docker image for Firefly  III.</Overview>
   <Support></Support>
   <Registry>https://hub.docker.com/r/jc5x/firefly-iii</Registry>
   <GitHub>https://github.com/firefly-iii</GitHub>
   <Repository>jc5x/firefly-iii:latest</Repository>
-  <WebUI>http://[IP]:[PORT:5080]/</WebUI>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
+  <Project>https://firefly-iii.org/</Project>
+  <DonateText>If you like Firefly and if it helps you save lots of money, why not send me a dime for every dollar saved. This is a joke, although the Paypal form works just fine, try it!</DonateText>
+  <DonateLInk>https://www.paypal.com/donate/?token=pNNoBy8QEJYX_reVrmcv6kteIb_n_i8DJ_7OI0D9btLNaz3u500-a4kl__L30IDosnNYrW&country.x=US&locale.x=US</DonateLInk>
   <Networking>
     <Mode>bridge</Mode>
   </Networking>
@@ -98,4 +95,7 @@
        Mode="rw" 
        Description="Thei is where firefly will store the uploaded file"
        Required="true">/mnt/user/appdata/firefly/upload/</Config>
+<WebUI>http://[IP]:[PORT:5080]/</WebUI>
+<Banner>https://camo.githubusercontent.com/729d179402476b1dd9de4ec9f5fa5910e6bf56aa/68747470733a2f2f66697265666c792d6969692e6f72672f7374617469632f696d672f6c6f676f2d736d616c6c2d6e65772e706e67</Banner>
+<Icon>https://camo.githubusercontent.com/729d179402476b1dd9de4ec9f5fa5910e6bf56aa/68747470733a2f2f66697265666c792d6969692e6f72672f7374617469632f696d672f6c6f676f2d736d616c6c2d6e65772e706e67</Icon>
 </Container>
