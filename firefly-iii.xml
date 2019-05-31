@@ -1,1 +1,101 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+  <Category>Tools: Utilities</Category>
+  <Name>Firefly III</Name>
+  <Description>
+    Official docker image for Firefly  III.
+  </Description>
+  <Overview>
+    Official docker image for Firefly  III.
+	Set the database name, root password, mysql user name, and mysql user password.
+  </Overview>
+  <Support></Support>
+  <Registry>https://hub.docker.com/r/jc5x/firefly-iii</Registry>
+  <GitHub>https://github.com/firefly-iii</GitHub>
+  <Repository>jc5x/firefly-iii:latest</Repository>
+  <WebUI>http://[IP]:[PORT:5080]/</WebUI>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+	<Port>
+		<Name>Host Port 1</Name>
+		<ContainerPort>80</ContainerPort>
+		<HostPort>5080</HostPort>
+		<Protocol>tcp</Protocol>
+	</Port>
+	<Variable>
+	  <Name>FIREFLY_PATH</Name>
+	  <Key>FIREFLY_PATH</Key>
+	  <Value>root_password</Value>
+	  <Description>FIREFLY_PATH</Description>
+	</Variable>
+	<Variable>
+	  <Name>CURL_VERSION</Name>
+	  <Key>CURL_VERSION</Key>
+	  <Value>1.1.1-pre6</Value>
+	  <Description>CURL_VERSION</Description>
+	</Variable>
+	<Variable>
+	  <Name>OPENSSL_VERSION</Name>
+	  <Key>OPENSSL_VERSION</Key>
+	  <Value>7.60.0</Value>
+	  <Description>OPENSSL_VERSION</Description>
+	</Variable>
+	<Variable>
+	  <Name>FF_APP_KEY</Name>
+	  <Key>FF_APP_KEY</Key>
+	  <Value></Value>
+	  <Description>FF_APP_KEY = key with exactly 32 characters</Description>
+	</Variable>
+	<Variable>
+	  <Name>>FF_APP_ENV</Name></Name></Name>
+	  <Key>FF_APP_ENV</Key>
+	  <Value>local</Value>
+	  <Description>FF_APP_ENV</Description>
+	</Variable>
+	<Variable>
+	  <Name>FF_DB_HOST</Name>
+	  <Key>FF_DB_HOST</Key>
+	  <Value></Value>
+	  <Description>FF_DB_HOST: DB_IP:PORT</Description>
+	</Variable>
+	<Variable>
+	  <Name>FF_DB_NAME</Name>
+	  <Key>FF_DB_NAME</Key>
+	  <Value>fireflydb</Value>
+	  <Description>FF_DB_NAME</Description>
+	</Variable>
+	<Variable>
+	  <Name>FF_DB_USER</Name>
+	  <Key>FF_DB_USER</Key>
+	  <Value>root</Value>
+	  <Description>FF_DB_USER</Description>
+	</Variable>
+	<Variable>
+	  <Name>FF_DB_PASSWORD</Name>
+	  <Key>FF_DB_PASSWORD</Key>
+	  <Value>root</Value>
+	  <Description>FF_DB_PASSWORD</Description>
+	</Variable>
+  </Environment>
+	<Config 
+       Type="Path" 
+       Name="Export directory" 
+       Target="/var/www/firefly-iii/storage/export" 
+       Default="/mnt/cache/appdata/firefly/export/" 
+       Mode="rw" 
+       Description="Thei is where firefly will store the export file"
+       Required="true">/mnt/user/appdata/firefly/export/</Config>
+	<Config 
+       Type="Path" 
+       Name="Upload directory" 
+       Target="/var/www/firefly-iii/storage/upload" 
+       Default="/mnt/cache/appdata/firefly/upload/" 
+       Mode="rw" 
+       Description="Thei is where firefly will store the uploaded file"
+       Required="true">/mnt/user/appdata/firefly/upload/</Config>
+</Container>
