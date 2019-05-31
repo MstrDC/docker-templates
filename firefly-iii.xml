@@ -48,46 +48,68 @@
       <Value>/var/www/firefly-iii</Value>
       <Name>FIREFLY_PATH</Name>
       <Key>FIREFLY_PATH</Key>
+	  <Mode/>
     </Variable>
     <Variable>
       <Value>7.60.0</Value>
       <Name>CURL_VERSION</Name>
       <Key>CURL_VERSION</Key>
+	  <Mode/>
     </Variable>
     <Variable>
       <Value>1.1.1pre6</Value>
       <Name>OPENSSL_VERSION</Name>
       <Key>OPENSSL_VERSION</Key>
+	  <Mode/>
     </Variable>
     <Variable>
       <Value>Random value of exactly 32 characters</Value>
       <Name>FF_APP_KEY</Name>
       <Key>FF_APP_KEY</Key>
+	  <Mode/>
     </Variable>
     <Variable>
       <Value>local</Value>
       <Name>FF_APP_ENV</Name>
       <Key>FF_APP_ENV</Key>
+	  <Mode/>
     </Variable>
     <Variable>
       <Value>DB_UP:DB_PORT - IP:3306</Value>
       <Name>FF_DB_HOST</Name>
       <Key>FF_DB_HOST</Key>
+	  <Mode/>
     </Variable>
     <Variable>
       <Value>fireflydb</Value>
       <Name>FF_DB_NAME</Name>
       <key>FF_DB_NAME</key>
+	  <Mode/>
     </Variable>
     <Variable>
       <Value>firefly</Value>
       <Name>FF_DB_USER</Name>
       <Key>FF_DB_USER</Key>
+	  <Mode/>
     </Variable>
     <Variable>
       <Value>firefly</Value>
       <Name>FF_DB_PASSWORD</Name>
       <Key>FF_DB_PASSWORD</Key>
+	  <Mode/>
     </Variable>
   </Environment>
+  <Labels/>
+  <Config Name="Host path 1" Target="/var/www/firefly-iii/storage/export" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly/export/</Config>
+  <Config Name="Host Path 2" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly/upload/</Config>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">5080</Config>
+  <Config Name="Host Key 1" Target="FIREFLY_PATH" Default="" Mode="" Description="Container Variable: FIREFLY_PATH" Type="Variable" Display="always" Required="false" Mask="false">/var/www/firefly-iii</Config>
+  <Config Name="Host Key 2" Target="CURL_VERSION" Default="" Mode="" Description="Container Variable: CURL_VERSION" Type="Variable" Display="always" Required="false" Mask="false">7.60.0</Config>
+  <Config Name="Host Key 3" Target="OPENSSL_VERSION" Default="" Mode="" Description="Container Variable: OPENSSL_VERSION" Type="Variable" Display="always" Required="false" Mask="false">1.1.1pre6</Config>
+  <Config Name="Host Key 4" Target="FF_APP_KEY" Default="" Mode="" Description="Container Variable: FF_APP_KEY" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 5" Target="FF_APP_ENV" Default="" Mode="" Description="Container Variable: FF_APP_ENV" Type="Variable" Display="always" Required="false" Mask="false">local</Config>
+  <Config Name="Host Key 6" Target="FF_DB_HOST" Default="" Mode="" Description="Container Variable: FF_DB_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 7" Target="FF_DB_NAME" Default="" Mode="" Description="Container Variable: FF_DB_NAME" Type="Variable" Display="always" Required="false" Mask="false">fireflydb</Config>
+  <Config Name="Host Key 8" Target="FF_DB_USER" Default="" Mode="" Description="Container Variable: FF_DB_USER" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
+  <Config Name="Host Key 9" Target="FF_DB_PASSWORD" Default="" Mode="" Description="Container Variable: FF_DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
 </Container>
