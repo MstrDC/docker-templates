@@ -47,47 +47,47 @@
     <Variable>
       <Value>/var/www/firefly-iii</Value>
       <Name>FIREFLY_PATH</Name>
-      <Mode/>
+      <Key>FIREFLY_PATH</Key>
     </Variable>
     <Variable>
       <Value>7.60.0</Value>
       <Name>CURL_VERSION</Name>
-      <Mode/>
+      <Key>CURL_VERSION</Key>
     </Variable>
     <Variable>
       <Value>1.1.1pre6</Value>
       <Name>OPENSSL_VERSION</Name>
-      <Mode/>
+      <Key>OPENSSL_VERSION</Key>
     </Variable>
     <Variable>
       <Value>Random value of exactly 32 characters</Value>
       <Name>FF_APP_KEY</Name>
-      <Mode/>
+      <Key>FF_APP_KEY</Key>
     </Variable>
     <Variable>
       <Value>local</Value>
       <Name>FF_APP_ENV</Name>
-      <Mode/>
+      <Key>FF_APP_ENV</Key>
     </Variable>
     <Variable>
       <Value>DB_UP:DB_PORT - IP:3306</Value>
       <Name>FF_DB_HOST</Name>
-      <Mode/>
+      <Key>FF_DB_HOST</Key>
     </Variable>
     <Variable>
       <Value>fireflydb</Value>
       <Name>FF_DB_NAME</Name>
-      <Mode/>
+      <key>FF_DB_NAME</key>
     </Variable>
     <Variable>
       <Value>firefly</Value>
       <Name>FF_DB_USER</Name>
-      <Mode/>
+      <Key>FF_DB_USER</Key>
     </Variable>
     <Variable>
       <Value>firefly</Value>
       <Name>FF_DB_PASSWORD</Name>
-      <Mode/>
+      <Key>FF_DB_PASSWORD</Key>
     </Variable>
   </Environment>
 </Container>
