@@ -19,10 +19,10 @@
   </Networking>
   <Environment>
 	<Port>
-		<Name>Host Port 1</Name>
-		<ContainerPort>80</ContainerPort>
-		<HostPort>5080</HostPort>
-		<Protocol>tcp</Protocol>
+	  <Name>Host Port 1</Name>
+	  <ContainerPort>80</ContainerPort>
+	  <HostPort>5080</HostPort>
+	  <Protocol>tcp</Protocol>
 	</Port>
 	<Variable>
 	  <Name>FIREFLY_PATH</Name>
@@ -79,7 +79,7 @@
 	  <Description>FF_DB_PASSWORD</Description>
 	</Variable>
   </Environment>
-	<Config 
+  <Config 
        Type="Path" 
        Name="Export directory" 
        Target="/var/www/firefly-iii/storage/export" 
@@ -87,7 +87,7 @@
        Mode="rw" 
        Description="Thei is where firefly will store the export file"
        Required="true">/mnt/user/appdata/firefly/export/</Config>
-	<Config 
+  <Config 
        Type="Path" 
        Name="Upload directory" 
        Target="/var/www/firefly-iii/storage/upload" 
