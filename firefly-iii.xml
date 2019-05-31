@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Firefly</Name>
+  <Name>Firefly III</Name>
   <Repository>jc5x/firefly-iii:latest</Repository>
   <Registry>https://hub.docker.com/r/jc5x/firefly-iii</Registry>
   <Network>bridge</Network>
