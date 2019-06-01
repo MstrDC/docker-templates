@@ -119,16 +119,16 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Host path 1" Target="/var/www/firefly-iii/storage/export" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly/export/</Config>
-  <Config Name="Host Path 2" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly/upload/</Config>
+  <Config Name="Host path 1" Target="/var/www/firefly-iii/storage/export" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export - Where firefly stores the file from a report that is exported." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly/export/</Config>
+  <Config Name="Host Path 2" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload - Where firefly stores the uploaded files that are used for bulk importing data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly/upload/</Config>
   <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">5080</Config>
   <Config Name="Host Key 1" Target="FIREFLY_PATH" Default="" Mode="" Description="Container Variable: FIREFLY_PATH" Type="Variable" Display="always" Required="false" Mask="false">/var/www/firefly-iii</Config>
   <Config Name="Host Key 2" Target="CURL_VERSION" Default="" Mode="" Description="Container Variable: CURL_VERSION" Type="Variable" Display="always" Required="false" Mask="false">7.60.0</Config>
   <Config Name="Host Key 3" Target="OPENSSL_VERSION" Default="" Mode="" Description="Container Variable: OPENSSL_VERSION" Type="Variable" Display="always" Required="false" Mask="false">1.1.1pre6</Config>
-  <Config Name="Host Key 4" Target="FF_APP_KEY" Default="" Mode="" Description="Container Variable: FF_APP_KEY" Type="Variable" Display="always" Required="false" Mask="false">Random value of 32 characters long</Config>
+  <Config Name="Host Key 4" Target="FF_APP_KEY" Default="" Mode="" Description="Container Variable: FF_APP_KEY - CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!" Type="Variable" Display="always" Required="false" Mask="false">S0m3R@nd0mString0f32Ch@rsEx@ct1y</Config>
   <Config Name="Host Key 5" Target="FF_APP_ENV" Default="" Mode="" Description="Container Variable: FF_APP_ENV" Type="Variable" Display="always" Required="false" Mask="false">local</Config>
-  <Config Name="Host Key 6" Target="FF_DB_HOST" Default="" Mode="" Description="Container Variable: FF_DB_HOST" Type="Variable" Display="always" Required="false" Mask="false">Database_IP:Database_Port - 192.168.1.10:3306</Config>
-  <Config Name="Host Key 7" Target="FF_DB_NAME" Default="" Mode="" Description="Container Variable: FF_DB_NAME" Type="Variable" Display="always" Required="false" Mask="false">fireflydb</Config>
-  <Config Name="Host Key 8" Target="FF_DB_USER" Default="" Mode="" Description="Container Variable: FF_DB_USER" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
-  <Config Name="Host Key 9" Target="FF_DB_PASSWORD" Default="" Mode="" Description="Container Variable: FF_DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
+  <Config Name="Host Key 6" Target="FF_DB_HOST" Default="" Mode="" Description="Container Variable: FF_DB_HOST - Database_IP:Database_PORT - 192.168.1.12:3306" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 7" Target="FF_DB_NAME" Default="" Mode="" Description="Container Variable: FF_DB_NAME - Name of the database where firefly can store its data" Type="Variable" Display="always" Required="false" Mask="false">fireflydb</Config>
+  <Config Name="Host Key 8" Target="FF_DB_USER" Default="" Mode="" Description="Container Variable: FF_DB_USER - Username that is allowed to connect and edit the firefly database" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
+  <Config Name="Host Key 9" Target="FF_DB_PASSWORD" Default="" Mode="" Description="Container Variable: FF_DB_PASSWORD - Password for the FF_DB_USER" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
 </Container>
