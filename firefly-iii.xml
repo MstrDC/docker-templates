@@ -40,6 +40,7 @@
         <HostPort>5080</HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
+        <Description>When updating this value, also update the WebUI value via advanced view.</Description>
       </Port>
     </Publish>
   </Networking>
@@ -121,7 +122,7 @@
   <Labels/>
   <Config Name="Host path 1" Target="/var/www/firefly-iii/storage/export" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export - Where firefly stores the file from a report that is exported." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly/export/</Config>
   <Config Name="Host Path 2" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload - Where firefly stores the uploaded files that are used for bulk importing data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly/upload/</Config>
-  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">5080</Config>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80 - When updating this value, also update the WebUI value via advanced view." Type="Port" Display="always" Required="false" Mask="false">5080</Config>
   <Config Name="Host Key 1" Target="FIREFLY_PATH" Default="" Mode="" Description="Container Variable: FIREFLY_PATH" Type="Variable" Display="always" Required="false" Mask="false">/var/www/firefly-iii</Config>
   <Config Name="Host Key 2" Target="CURL_VERSION" Default="" Mode="" Description="Container Variable: CURL_VERSION" Type="Variable" Display="always" Required="false" Mask="false">7.60.0</Config>
   <Config Name="Host Key 3" Target="OPENSSL_VERSION" Default="" Mode="" Description="Container Variable: OPENSSL_VERSION" Type="Variable" Display="always" Required="false" Mask="false">1.1.1pre6</Config>
