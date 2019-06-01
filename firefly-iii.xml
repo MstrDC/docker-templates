@@ -49,11 +49,13 @@
       <HostDir>/mnt/user/appdata/firefly/export/</HostDir>
       <ContainerDir>/var/www/firefly-iii/storage/export</ContainerDir>
       <Mode>rw</Mode>
+      <Description>Where firefly stores the file from a report that is exported.</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/firefly/upload/</HostDir>
       <ContainerDir>/var/www/firefly-iii/storage/upload</ContainerDir>
       <Mode>rw</Mode>
+      <Description>Where firefly stores the uploaded files that are used for bulk importing data.</Description>
     </Volume>
   </Data>
   <Environment>
@@ -76,9 +78,10 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>Random value of exactly 32 characters</Value>
+      <Value>S0m3R@nd0mString0f32Ch@rsEx@ct1y/Value>
       <Name>FF_APP_KEY</Name>
       <Key>FF_APP_KEY</Key>
+      <Description>CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!</Description>
       <Mode/>
     </Variable>
     <Variable>
@@ -88,28 +91,32 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>DB_UP:DB_PORT - IP:3306</Value>
-      <Name>FF_DB_HOST</Name>
+      <Value></Value>
+      <Name></Name>
       <Key>FF_DB_HOST</Key>
+      <Description>Database_IP:Database_PORT - 192.168.1.12:3306</Description>
       <Mode/>
     </Variable>
     <Variable>
       <Value>fireflydb</Value>
       <Name>FF_DB_NAME</Name>
       <key>FF_DB_NAME</key>
+      <Description>Database name where firefly can store its data</Description>
       <Mode/>
     </Variable>
     <Variable>
       <Value>firefly</Value>
       <Name>FF_DB_USER</Name>
       <Key>FF_DB_USER</Key>
+      <Description>Username that is allowed to connect and edit the firefly database</Description>
       <Mode/>
     </Variable>
     <Variable>
       <Value>firefly</Value>
       <Name>FF_DB_PASSWORD</Name>
       <Key>FF_DB_PASSWORD</Key>
-	  <Mode/>
+      <Description>Password for the FF_DB_USER</Description>
+      <Mode/>
     </Variable>
   </Environment>
   <Labels/>
