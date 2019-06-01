@@ -77,7 +77,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>S0m3R@nd0mString0f32Ch@rsEx@ct1y/Value>
+      <Value>S0m3R@nd0mString0f32Ch@rsEx@ct1y</Value>
       <Name>FF_APP_KEY</Name>
       <Key>FF_APP_KEY</Key>
       <Description>CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!</Description>
@@ -100,7 +100,7 @@
       <Value>fireflydb</Value>
       <Name>FF_DB_NAME</Name>
       <key>FF_DB_NAME</key>
-      <Description>Database name where firefly can store its data</Description>
+      <Description>Name of the database where firefly can store its data</Description>
       <Mode/>
     </Variable>
     <Variable>
