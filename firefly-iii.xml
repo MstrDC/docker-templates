@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://firefly-iii.org/</Project>
-  <Overview/>
+  <Overview>"Firefly III" is a self-hosted financial manager. It can help you keep track of expenses, income, budgets and everything in between. It supports credit cards, shared household accounts and savings accounts. It’s pretty fancy. You should use it to save and organise money.</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:5080]/</WebUI>
   <TemplateURL/>
@@ -20,7 +20,20 @@
   <DateInstalled>1559311988</DateInstalled>
   <DonateText>If you like Firefly and if it helps you save lots of money, why not send me a dime for every dollar saved. This is a joke, although the Paypal form works just fine, try it!</DonateText>
   <DonateLInk>https://firefly-iii.org/about-general.html</DonateLInk>
-  <Description/>
+  <Description>This is a basic docker template, just enough to get it up and running. It requires a mysql database, so you will need a mysql or mariadb instance.
+        Setup:
+          Open the database server/docker console from the docker page
+        1) mysql -uroot -p        (Login to your database server with root)
+        2) CREATE USER 'firefly' IDENTIFIED BY 'firefly';
+        3) CREATE DATABASE IF NOT EXISTS fireflydb;
+        4) GRANT ALL PRIVILEGES ON fireflydb.* TO 'firefly' IDENTIFIED BY 'firefly';(MariaDB) OR GRANT ALL PRIVILEGES ON fireflydb.* TO 'firefly'@'localhost';(mysql)
+        5) quit
+          Open the firefly-iii console from the docker page
+        1) php artisan migrate --seed   (Took me 30 min until finished, so be patient!)
+        2) php artisan firefly:upgrade-database
+        3) php artisan firefly:verify
+        4) php artisan passport:install
+        </Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
