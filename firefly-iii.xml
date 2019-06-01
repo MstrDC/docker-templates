@@ -32,8 +32,7 @@
         1) php artisan migrate --seed   (Took me 30 min until finished, so be patient!)
         2) php artisan firefly:upgrade-database
         3) php artisan firefly:verify
-        4) php artisan passport:install
-        </Description>
+        4) php artisan passport:install</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
