@@ -97,10 +97,10 @@
       <Description>Database_IP: 192.168.1.12</Description>
       <Mode/>
     </Variable>
-	<Variable>
+    <Variable>
       <Value>3406</Value>
       <key>DB_PORT</key>
-	  <Description>Database port: 3406</Description>
+      <Description>Database port: 3406</Description>
       <Mode/>
     </Variable>
     <Variable>
