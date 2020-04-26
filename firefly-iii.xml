@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <Container version="2">
   <Name>Firefly III</Name>
   <Repository>jc5x/firefly-iii:latest</Repository>
@@ -125,8 +126,8 @@
   <Config Name="Host path 1" Target="/var/www/firefly-iii/storage/export" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export - Where firefly stores the file from a report that is exported." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/firefly-iii/export/</Config>
   <Config Name="Host Path 2" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload - Where firefly stores the uploaded files that are used for bulk importing data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly-iii/upload/</Config>
   <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80 - When updating this value, also update the WebUI value via advanced view." Type="Port" Display="always" Required="false" Mask="false">5080</Config>
-  <Config Name="Host Key 1" Target="FIREFLY_PATH" Default="" Mode="" Description="Container Variable: FIREFLY_PATH" Type="Variable" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly-iii/</Config>
-  <Config Name="Host Key 4" Target="APP_KEY" Default="" Mode="" Description="Container Variable: APP_KEY - CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!" Type="Variable" Display="always" Required="false" Mask="false">S0m3R@nd0mString0f32Ch@rsEx@ct1y</Config>
+  <Config Name="FIREFLY_PATH" Target="FIREFLY_PATH" Default="" Mode="" Description="Container Variable: FIREFLY_PATH" Type="Variable" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly-iii/</Config>
+  <Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="Container Variable: APP_KEY - CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!" Type="Variable" Display="always" Required="false" Mask="false">S0m3R@nd0mString0f32Ch@rsEx@ct1y</Config>
   <Config Name="DB_CONNECTION" Target="DB_CONNECTION" Default="" Mode="" Description="Container Variable: DB_CONNECTION - mysql or empty when using PostgreSQL" Type="Variable" Display="always" Required="false" Mask="false">mysql</Config>
   <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST - Database_IP:192.168.1.12" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="DB_PORT" Target="DB_PORT" Default="" Mode="" Description="Container Variable: DB_PORT - Database_PORT: 3306" Type="Variable" Display="always" Required="false" Mask="false"></Config>	
