@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <Container version="2">
   <Name>Firefly III</Name>
   <Repository>jc5x/firefly-iii:latest</Repository>
@@ -52,7 +51,7 @@
       <Description>Where firefly stores the file from a report that is exported.</Description>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/firefly-iii/upload/</HostDir>
+      <HostDir>/mnt/user/appdata/firefly-iii/upload/</HostDir>
       <ContainerDir>/var/www/firefly-iii/storage/upload</ContainerDir>
       <Mode>rw</Mode>
       <Description>Where firefly stores the uploaded files that are used for bulk importing data.</Description>
@@ -60,21 +59,9 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>/mnt/cache/appdata/firefly-iii/</Value>
+      <Value>/mnt/user/appdata/firefly-iii/</Value>
       <Name>FIREFLY_PATH</Name>
       <Key>FIREFLY_PATH</Key>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>7.60.0</Value>
-      <Name>CURL_VERSION</Name>
-      <Key>CURL_VERSION</Key>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>1.1.1pre6</Value>
-      <Name>OPENSSL_VERSION</Name>
-      <Key>OPENSSL_VERSION</Key>
       <Mode/>
     </Variable>
     <Variable>
@@ -84,21 +71,23 @@
       <Description>CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!</Description>
       <Mode/>
     </Variable>
-    <Variable>
-      <Value>local</Value>
-      <Name>APP_ENV</Name>
-      <Key>APP_ENV</Key>
+	<Variable>
+      <Value>mysql</Value>
+      <Name>DB_CONNECTION</Name>
+      <Key>DB_CONNECTION</Key>
+      <Description>mysql or empty when using PostgreSQL</Description>
       <Mode/>
     </Variable>
     <Variable>
       <Value></Value>
-      <Name></Name>
+      <Name>DB_HOST</Name>
       <Key>DB_HOST</Key>
       <Description>Database_IP: 192.168.1.12</Description>
       <Mode/>
     </Variable>
     <Variable>
       <Value>3406</Value>
+	  <Name>DB_PORT</Name>
       <key>DB_PORT</key>
       <Description>Database port: 3406</Description>
       <Mode/>
@@ -124,19 +113,25 @@
       <Description>Password for the DB_USER</Description>
       <Mode/>
     </Variable>
+	<Variable>
+      <Value>stdout</Value>
+      <Name>LOG_CHANNEL</Name>
+      <Key>LOG_CHANNEL</Key>
+      <Description>Required when using MariaDB</Description>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Host path 1" Target="/var/www/firefly-iii/storage/export" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export - Where firefly stores the file from a report that is exported." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/firefly-iii/export/</Config>
-  <Config Name="Host Path 2" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload - Where firefly stores the uploaded files that are used for bulk importing data." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/firefly-iii/upload/</Config>
+  <Config Name="Host Path 2" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload - Where firefly stores the uploaded files that are used for bulk importing data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly-iii/upload/</Config>
   <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80 - When updating this value, also update the WebUI value via advanced view." Type="Port" Display="always" Required="false" Mask="false">5080</Config>
-  <Config Name="Host Key 1" Target="FIREFLY_PATH" Default="" Mode="" Description="Container Variable: FIREFLY_PATH" Type="Variable" Display="always" Required="false" Mask="false">/mnt/cache/appdata/firefly-iii/</Config>
-  <Config Name="Host Key 2" Target="CURL_VERSION" Default="" Mode="" Description="Container Variable: CURL_VERSION" Type="Variable" Display="always" Required="false" Mask="false">7.60.0</Config>
-  <Config Name="Host Key 3" Target="OPENSSL_VERSION" Default="" Mode="" Description="Container Variable: OPENSSL_VERSION" Type="Variable" Display="always" Required="false" Mask="false">1.1.1pre6</Config>
+  <Config Name="Host Key 1" Target="FIREFLY_PATH" Default="" Mode="" Description="Container Variable: FIREFLY_PATH" Type="Variable" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly-iii/</Config>
   <Config Name="Host Key 4" Target="APP_KEY" Default="" Mode="" Description="Container Variable: APP_KEY - CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!" Type="Variable" Display="always" Required="false" Mask="false">S0m3R@nd0mString0f32Ch@rsEx@ct1y</Config>
-  <Config Name="Host Key 5" Target="APP_ENV" Default="" Mode="" Description="Container Variable: APP_ENV" Type="Variable" Display="always" Required="false" Mask="false">local</Config>
-  <Config Name="Host Key 6" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST - Database_IP:192.168.1.12" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Host Key 7" Target="DB_PORT" Default="" Mode="" Description="Container Variable: DB_PORT - Database_PORT: 3306" Type="Variable" Display="always" Required="false" Mask="false"></Config>	
-  <Config Name="Host Key 8" Target="DB_DATABASE" Default="" Mode="" Description="Container Variable: DB_DATABASE - Name of the database where firefly can store its data" Type="Variable" Display="always" Required="false" Mask="false">fireflydb</Config>
-  <Config Name="Host Key 9" Target="DB_USERNAME" Default="" Mode="" Description="Container Variable: DB_USERNAME - Username that is allowed to connect and edit the firefly database" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
-  <Config Name="Host Key 10" Target="DB_PASSWORD" Default="" Mode="" Description="Container Variable: DB_PASSWORD - Password for the DB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
+  <Config Name="DB_CONNECTION" Target="DB_CONNECTION" Default="" Mode="" Description="Container Variable: DB_CONNECTION - mysql or empty when using PostgreSQL" Type="Variable" Display="always" Required="false" Mask="false">mysql</Config>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST - Database_IP:192.168.1.12" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DB_PORT" Target="DB_PORT" Default="" Mode="" Description="Container Variable: DB_PORT - Database_PORT: 3306" Type="Variable" Display="always" Required="false" Mask="false"></Config>	
+  <Config Name="DB_DATABASE" Target="DB_DATABASE" Default="" Mode="" Description="Container Variable: DB_DATABASE - Name of the database where firefly can store its data" Type="Variable" Display="always" Required="false" Mask="false">fireflydb</Config>
+  <Config Name="DB_USERNAME" Target="DB_USERNAME" Default="" Mode="" Description="Container Variable: DB_USERNAME - Username that is allowed to connect and edit the firefly database" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
+  <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="Container Variable: DB_PASSWORD - Password for the DB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
+  <Config Name="LOG_CHANNEL" Target="LOG_CHANNEL" Default="" Mode="" Description="Container Variable: LOG_CHANNEL - Required when using MariaDB" Type="Variable" Display="always" Required="false" Mask="false">stdout</Config>
 </Container>
